@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+      
+  <script src="./b.js" async></script>
+<style>
+    header{
+        text-align: center ;
+        background-color: aqua;
+    }
+    th, td {
+  border: 2px solid black; /* Sets the border for cells */
+  padding: 8px; /* Adds padding for better readability */
+  text-align: left; /* Aligns text to the left */
+}
+
+tr:hover td {
+  border: 2px solid #3399ff; /* Light blue border on hover */
+}
+
+    
+</style>
+</head>
+<body>
+    <header>
+           <h1>Welcome to <span 
+            style = "color: red;">My Website</span></h1>
+    <p>Advanced HTML,css & JS Example</p>
+      </header>
+    <p>click me to change my color! This is a more challenging HTML page for students.Famous quote:"Learning never exhaust the mind".Code example:console.log("Hello World!)</p>
+    <p>"The best way to predict the future is to create it"-Abraham Lincoin</p>
+      
+    
+
+
+<img src=image1.png
+     alt="dummy image" 
+     width="20px" height="20px">dummy image
+<!-- ...existing code... -->
+<h1>Student Data Table</h1>
+<table style="width: 100%; height: auto; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Course</th>
+    </tr>
+  </thead>
+  <tbody id="studentTableBody"></tbody>
+</table>
+<script>
+// Simulate fetching data from an API
+const students = [
+  { name: "John Doe", age: 20, course: "Computer Science" },
+  { name: "Jane Smith", age: 22, course: "Information Technology" },
+  { name: "Sam Wilson", age: 19, course: "Data Analytics" }
+];
+
+const tbody = document.getElementById('studentTableBody');
+students.forEach(student => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${student.name}</td>
+    <td>${student.age}</td>
+    <td>${student.course}</td>
+  `;
+  tbody.appendChild(tr);
+  
+});
+</script>
+<!-- ...existing code... -->
+
+<!-- ...existing code... -->
+     
+           <!-- <h1> Student Data Table</h1>
+           <table  style ="width: 100%;height: auto ;border-collapse: collapse;"> 
+            <thead>
+           <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+           </tr></thead>
+           <tr>
+             <td>John Doe</td>
+             <td>20</td>
+             <td>Computer Science</td>
+             
+           </tr>
+           <tr>
+            <td>Jane Smith</td>
+            <td>22</td>
+            <td>Information Technology</td>
+            
+           </tr>
+            <tr>
+            <td>Sam Wilson</td>
+            <td>19</td>
+            <td>Data Analytics</td>
+           </tr>
+           
+           </table> 
+          
+  -->
+    
+<h2>Top Skills</h2>
+<ul>
+    <li>HTML</li>
+    <ul>
+        <li>Tags</li>
+        <li>Attributes</li>
+        <li>forms</li>
+    </ul>
+    <li>CSS</li>
+    <ul>
+        <li>Selectors</li>
+        <li>Box Modell</li>
+        <li>Positioning</li>
+    </ul>
+    <li>JavaScript</li>
+    <ul>
+        <li>DOM</li>
+        <li>Events</li>
+        <li>Functions</li>
+    </ul>
+</ul>
+  <ul id="skills"></ul>
+<input id="newSkill" type="text" placeholder="enter skill">
+<button type="button" id="addBtn">Add skill</button>
+
+<script>
+const list = document.getElementById('skills');
+const input = document.getElementById('newSkill');
+document.getElementById('addBtn').addEventListener('click', () => {
+  const v = input.value.trim();
+  if (!v) return;
+  const li = document.createElement('li');
+  li.textContent = v;
+  list.appendChild(li);
+  input.value = '';
+  input.focus();
+});
+</script>
+    
+    <h2>Contact Form</h2>
+    
+<form>
+  <label>Name:</label>
+  <input type="text" name="name"><br><br>
+
+  <label>Email:</label>
+  <input type="email" name="email" required><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+    <h2>Fun Zone</h2>
+    
+<button onclick="toggleColor()">Change the background color</button>
+
+<script>
+    let originalColor = document.body.style.backgroundColor;
+    let isChanged = false;
+
+    function toggleColor() {
+        if (isChanged) {
+            document.body.style.backgroundColor = originalColor;
+        } else {
+            document.body.style.backgroundColor = "lightblue";
+        }
+        isChanged = !isChanged;
+    }
+</script>
+
+
+    <script>
+        const input=document.getElementById("in");
+        const btn=document.getElementsByTagName("button")
+        const para=document.getElementById("data");
+
+       btn[0].addEventListener("click",()=>{
+console.log(input.value);
+para.textContent=input.value;
+  }) ;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - Movie Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            padding: 30px;
+            margin: 0;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .image-container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border: 4px solid #fff;
+            margin: 12px;
+            border-radius: 15px;
+       
+        }
+      
+        p {
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+          
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span style="color: #3498db;">Movie</span> <span style="color: #e74c3c;">Images</span> with <span style="color: #f39c12;">Different</span> <span style="color: #2ecc71;">IDs</span></h1>
+    <p>This page shows 10 images from ID 5 to 14 using JavaScript loop</p>
+    
+    <div class="image-container" id="imageDiv"></div>
+
+    <script>
+        
+        var imageDiv = document.getElementById("imageDiv");
+        
+        
+        for (var id = 5; id <= 14; id++) {
+            
+            var newImage = document.createElement("img");
+            
+            
+            newImage.src = "https://via.assets.so/movie.png?id=" + id + "&q=95&w=360&h=360&fit=fill";
+            
+            
+            newImage.alt = "Movie image number " + id;
+            newImage.title = "Image ID: " + id;
+            
+            
+            imageDiv.appendChild(newImage);
+        }
+    </script>
+    
+    <footer>
+        <p><strong>Name:</strong> Achinta R S</p>
+        <p><strong>Email:</strong> achintars349@gmail.com</p>
+        <p><strong>Phone:</strong>8762492380</p>
+        <p></p>
+    </footer>
+</body>
+</html>
