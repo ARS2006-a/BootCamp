@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Assessment</title>
+    <link rel="stylesheet" href="e.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Management Assessment</h1>
+        </header>
+        <section class="actions">
+            <h2>Actions</h2>
+            <div class="buttons">
+                <button id="changeBgBtn">Change Background Color</button>
+                <button id="toggleTableBtn">Hide/Show Table</button>
+                <button id="sortByNameBtn">Sort by Name</button>
+                <button id="filterByAgeBtn">Show Age > 20</button>
+                <button id="resetBtn">Reset Table</button>
+            </div>
+        </section>
+        <section class="student-list">
+            <h2>Student List</h2>
+            <div id="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Course</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="e.js"></script>
+</body>
+</html>
